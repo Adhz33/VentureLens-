@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => ({
   plugins: [
     react(),
   ].filter(Boolean),
+  base: mode === "production" ? "/VentureLens-/" : "/",
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
